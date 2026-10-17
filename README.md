@@ -11,7 +11,7 @@ Aplicación web responsive de EVOLVA para emprendimientos pequeños de Ecuador. 
 
 ## Ejecutar localmente
 
-Requiere Node.js 20.6 o superior.
+Requiere Node.js 22.5 o superior (incluye Node.js 26.8).
 
 1. Instala dependencias: `npm install`.
 2. Copia `.env.example` como `.env`.

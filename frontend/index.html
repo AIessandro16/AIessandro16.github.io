@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EVOLVA — Digitalizamos negocios</title>
+    <title>EVOLVA — Impulsamos tu negocio</title>
 
     <meta
         name="description"
@@ -15,10 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+    <link rel="icon" type="image/svg+xml" href="evolva-mark.svg">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -32,11 +33,12 @@
 
     <div class="loading-content">
 
-        <div class="loading-logo">
-            EVOLVA<span>_</span>
+        <div class="loading-brand">
+            <img class="loading-mark" src="evolva-mark.svg" alt="">
+            <div class="loading-wordmark">EVOLVA</div>
         </div>
 
-        <p>INITIALIZING DIGITAL EVOLUTION...</p>
+        <p>IMPULSAMOS TU NEGOCIO · INITIALIZING...</p>
 
         <div class="loading-bar">
             <span id="loadingProgress"></span>
@@ -55,8 +57,12 @@
 
 <header class="header">
 
-    <a href="#inicio" class="logo">
-        EVOLVA<span>_</span>
+    <a href="#inicio" class="logo" aria-label="EVOLVA, impulsamos tu negocio">
+        <img class="logo-mark" src="evolva-mark.svg" alt="">
+        <span class="logo-lockup">
+            <span class="logo-wordmark">EVOLVA</span>
+            <span class="logo-tagline">IMPULSAMOS TU NEGOCIO</span>
+        </span>
     </a>
 
     <nav id="navigation">
@@ -106,7 +112,7 @@
 
         <div class="eyebrow">
             <span></span>
-            DIGITALIZACIÓN / MARKETING
+            ESTRATEGIA / SISTEMAS DIGITALES
         </div>
 
         <h1>
@@ -144,36 +150,55 @@
     </div>
 
 
-    <!-- ARCADE ART -->
+    <!-- Emblema digital de EVOLVA -->
 
-    <div class="hero-art">
+    <div class="hero-art" role="img" aria-label="Emblema de EVOLVA formado por trazos en evolución y coordenadas digitales">
+        <div class="graphic-orbit graphic-orbit-one"></div>
+        <div class="graphic-orbit graphic-orbit-two"></div>
+        <span class="graphic-coordinate coordinate-a">E / 01</span>
+        <span class="graphic-coordinate coordinate-b">EVOLUCIÓN</span>
 
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
+        <svg class="evolution-graphic" viewBox="0 0 600 540" aria-hidden="true" focusable="false">
+            <defs>
+                <linearGradient id="evolvaMetal" x1="150" y1="130" x2="440" y2="420" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E9D2A8"/>
+                    <stop offset=".48" stop-color="#A9844D"/>
+                    <stop offset="1" stop-color="#D9BC87"/>
+                </linearGradient>
+                <linearGradient id="evolvaTrace" x1="145" y1="410" x2="458" y2="145" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C9A66B" stop-opacity=".12"/>
+                    <stop offset=".5" stop-color="#E3C58F" stop-opacity=".85"/>
+                    <stop offset="1" stop-color="#C9A66B" stop-opacity=".1"/>
+                </linearGradient>
+            </defs>
 
-        <div class="pixel-sun"></div>
+            <g class="graphic-grid-lines" fill="none" stroke="url(#evolvaTrace)" stroke-width="1">
+                <path d="M89 270H157L208 219"/>
+                <path d="M442 176h58v-47"/>
+                <path d="M420 382h79v58"/>
+                <path d="M155 393h-57v45"/>
+                <circle cx="89" cy="270" r="3" fill="#D9BC87"/>
+                <circle cx="500" cy="129" r="3" fill="#D9BC87"/>
+                <circle cx="499" cy="440" r="3" fill="#D9BC87"/>
+                <circle cx="98" cy="438" r="3" fill="#D9BC87"/>
+            </g>
 
-        <div class="mountain mountain-back"></div>
-        <div class="mountain mountain-front"></div>
-
-        <div class="flag">
-            E
-        </div>
+            <g class="graphic-mark" fill="none" stroke="url(#evolvaMetal)" stroke-linecap="round" stroke-linejoin="round">
+                <path class="mark-stroke mark-stroke-one" pathLength="1" d="M176 287c13-62 77-129 207-166-22 54-65 83-124 112-40 20-68 36-83 54Z" stroke-width="17"/>
+                <path class="mark-stroke mark-stroke-two" pathLength="1" d="M205 317c43-43 111-77 222-91-31 48-88 67-158 82-26 5-46 8-64 9Z" stroke-width="15"/>
+                <path class="mark-stroke mark-stroke-three" pathLength="1" d="M203 339c68-2 137 26 228 91-75 3-141-17-189-47-28-17-41-30-39-44Z" stroke-width="17"/>
+            </g>
+            <circle class="graphic-core" cx="302" cy="317" r="5" fill="#E3C58F"/>
+        </svg>
 
         <div class="floating-card card-1">
-
-            <small>EVOLUTION</small>
-
-            <strong>+01</strong>
-
+            <small>EVOLVA / SISTEMA</small>
+            <strong>EN MOVIMIENTO</strong>
         </div>
 
         <div class="floating-card card-2">
-
-            <small>STATUS</small>
-
-            <strong>READY</strong>
-
+            <small>ESTRATEGIA</small>
+            <strong>01 — ∞</strong>
         </div>
 
     </div>
@@ -280,18 +305,18 @@
             </div>
 
             <h3>
-                Contenido para tus redes
+                Publicaciones para tus redes
             </h3>
 
             <p>
 
-                Creamos publicaciones, videos e ideas para mostrar
-                lo mejor de tu negocio.
+                Diseñamos publicaciones y escribimos textos sencillos
+                para que tus clientes conozcan lo que ofreces.
 
             </p>
 
             <span class="service-footer">
-                CONTENIDO ↗
+                DISEÑOS Y TEXTOS ↗
             </span>
 
         </article>
@@ -306,18 +331,18 @@
             </div>
 
             <h3>
-                Nos encargamos de tus redes
+                Manejo de redes (community manager)
             </h3>
 
             <p>
 
-                Organizamos publicaciones, mantenemos activas tus
-                redes y ayudamos a mantener una comunicación constante.
+                Planificamos y publicamos contenido, y respondemos
+                comentarios y mensajes según el plan que elijas.
 
             </p>
 
             <span class="service-footer">
-                COMMUNITY MANAGER ↗
+                MANEJO DE REDES ↗
             </span>
 
         </article>
@@ -332,18 +357,18 @@
             </div>
 
             <h3>
-                Haz que tu marca sea reconocible
+                Dale una imagen propia a tu negocio
             </h3>
 
             <p>
 
-                Definimos logo, colores, estilo y elementos visuales
-                para que tu negocio tenga una identidad propia.
+                Creamos un logo y elegimos colores y estilos para que
+                las personas reconozcan tu negocio.
 
             </p>
 
             <span class="service-footer">
-                BRANDING ↗
+                IMAGEN DE MARCA ↗
             </span>
 
         </article>
@@ -358,13 +383,13 @@
             </div>
 
             <h3>
-                Lleva tu negocio a internet
+                Presenta tu negocio en una página web
             </h3>
 
             <p>
 
-                Creamos una página donde tus clientes puedan
-                conocerte, ver tus servicios y contactarte.
+                Creamos una página clara donde las personas puedan
+                conocer lo que haces y escribirte.
 
             </p>
 
@@ -384,13 +409,13 @@
             </div>
 
             <h3>
-                Haz crecer tu negocio
+                Decide qué mejorar primero
             </h3>
 
             <p>
 
-                Creamos estrategias para aumentar tu presencia,
-                atraer clientes y aprovechar mejor tus canales digitales.
+                Te ayudamos a elegir los próximos pasos para que más
+                personas conozcan tu negocio y puedan contactarte.
 
             </p>
 
@@ -472,7 +497,7 @@
                         value="physical"
                     >
 
-                    Tengo un negocio físico, pero casi no estoy
+                    Tengo un negocio local, pero casi no aparezco
                     en internet.
 
                 </label>
@@ -484,7 +509,7 @@
                         value="social"
                     >
 
-                    Tengo redes, pero publico poco o sin estrategia.
+                    Tengo redes sociales, pero publico poco.
 
                 </label>
 
@@ -495,7 +520,7 @@
                         value="active"
                     >
 
-                    Tengo redes activas, pero quiero mejorar.
+                    Publico en redes, pero quiero hacerlo mejor.
 
                 </label>
 
@@ -554,7 +579,7 @@
                         value="digital"
                     >
 
-                    Tener una presencia digital completa.
+                    Que mis clientes puedan encontrarme y escribirme por internet.
 
                 </label>
 
@@ -591,7 +616,7 @@
                         value="management"
                     >
 
-                    Manejo de mis redes.
+                    Que alguien publique y responda en mis redes.
 
                 </label>
 
@@ -602,7 +627,7 @@
                         value="branding"
                     >
 
-                    La imagen de mi negocio.
+                    El logo y la imagen de mi negocio.
 
                 </label>
 
@@ -679,7 +704,7 @@
 </section>
 
 
-<!-- <!-- =========================
+<!-- =========================
      CATÁLOGO
 ========================= -->
 
@@ -689,82 +714,82 @@
             <div class="section-number">04 / CATÁLOGO</div>
             <h2>Soluciones claras.<br><span>Precios sin sorpresas.</span></h2>
         </div>
-        <p>Empieza con lo que necesitas hoy. Todos los precios están en USD y los costes de terceros se cotizan por separado.</p>
+        <p>Elige solo lo que tu negocio necesita. Todos los precios están en dólares y te avisamos antes de cualquier coste adicional.</p>
     </div>
 
     <div class="pricing-intro">
-        <span class="terminal">EVOLVA / TARIFAS DE LANZAMIENTO</span>
-        <p>Precios orientativos para emprendimientos pequeños en Ecuador. Cada servicio tiene entregables y límites definidos.</p>
+        <span class="terminal">EVOLVA / PRECIOS INICIALES</span>
+        <p>Precios de inicio para negocios pequeños. Te explicamos qué incluye cada opción y acordamos el trabajo antes de comenzar. ¿No sabes cuál elegir? Te orientamos sin compromiso.</p>
     </div>
 
     <div class="catalog-grid">
         <article class="catalog-card">
-            <div class="catalog-top"><span class="catalog-tag">01 / ANÁLISIS</span><span class="catalog-icon">⌁</span></div>
-            <h3>Diagnóstico digital</h3><p class="catalog-desc">Descubre qué mejorar primero en tu presencia online.</p>
-            <div class="catalog-price">$35 <small>pago único</small></div>
-            <ul><li>Revisión de hasta 2 canales digitales</li><li>5 mejoras prioritarias en un informe breve</li><li>Reunión de devolución de hasta 20 min</li></ul>
-            <p class="catalog-limit">No incluye implementación ni auditoría técnica avanzada.</p>
-            <a class="catalog-link" href="#contacto" data-service="Diagnóstico digital">Me interesa ↗</a>
+            <div class="catalog-top"><span class="catalog-tag">01 / REVISIÓN</span><span class="catalog-icon">⌁</span></div>
+            <h3>Revisión de tu negocio en internet</h3><p class="catalog-desc">Te mostramos qué está funcionando y qué conviene mejorar primero.</p>
+            <div class="catalog-price">$25 <small>pago único</small></div>
+            <ul><li>Revisión de hasta 2 lugares: por ejemplo, Instagram, Facebook o tu página web</li><li>5 recomendaciones claras en un informe breve</li><li>Una llamada de hasta 20 minutos para explicarte los resultados</li></ul>
+            <p class="catalog-limit">Incluye recomendaciones; la realización de los cambios se cotiza aparte.</p>
+            <a class="catalog-link" href="#contacto" data-service="Revisión de tu negocio en internet">Me interesa ↗</a>
         </article>
         <article class="catalog-card">
-            <div class="catalog-top"><span class="catalog-tag">02 / IDENTIDAD</span><span class="catalog-icon">✳</span></div>
-            <h3>Logotipo esencial</h3><p class="catalog-desc">Una base visual para que tu negocio empiece a reconocerse.</p>
-            <div class="catalog-price">$75 <small>pago único</small></div>
-            <ul><li>1 propuesta de dirección visual</li><li>Logotipo principal y versión simplificada</li><li>Paleta y tipografías básicas</li><li>PNG/JPG y 2 rondas de ajustes</li></ul>
-            <p class="catalog-limit">No incluye manual de marca ni archivos vectoriales editables.</p>
-            <a class="catalog-link" href="#contacto" data-service="Logotipo esencial">Me interesa ↗</a>
+            <div class="catalog-top"><span class="catalog-tag">02 / LOGOTIPO</span><span class="catalog-icon">✳</span></div>
+            <h3>Diseño de logotipo</h3><p class="catalog-desc">Un logo claro y fácil de reconocer para tu negocio.</p>
+            <div class="catalog-price">$60 <small>pago único</small></div>
+            <ul><li>Una propuesta de diseño</li><li>Logo principal y una versión sencilla</li><li>Colores y tipos de letra recomendados</li><li>Archivos listos para usar y 2 oportunidades para pedir cambios</li></ul>
+            <p class="catalog-limit">No incluye guía completa de marca ni archivos para editar el diseño.</p>
+            <a class="catalog-link" href="#contacto" data-service="Diseño de logotipo">Me interesa ↗</a>
         </article>
         <article class="catalog-card">
-            <div class="catalog-top"><span class="catalog-tag">03 / BRANDING</span><span class="catalog-icon">▧</span></div>
-            <h3>Identidad visual básica</h3><p class="catalog-desc">Un sistema visual coherente para tus redes y materiales.</p>
-            <div class="catalog-price">$160 <small>pago único</small></div>
-            <ul><li>Logotipo y versiones secundarias</li><li>Colores y sistema tipográfico</li><li>Mini manual de 5–8 páginas</li><li>3 aplicaciones digitales y 2 rondas de ajustes</li></ul>
-            <p class="catalog-limit">No incluye registro legal, impresión ni packaging complejo.</p>
-            <a class="catalog-link" href="#contacto" data-service="Identidad visual básica">Me interesa ↗</a>
+            <div class="catalog-top"><span class="catalog-tag">03 / IMAGEN DE MARCA</span><span class="catalog-icon">▧</span></div>
+            <h3>Imagen de marca</h3><p class="catalog-desc">Definimos cómo se verá tu negocio en redes y otros materiales.</p>
+            <div class="catalog-price">$125 <small>pago único</small></div>
+            <ul><li>Logo principal y versiones sencillas</li><li>Colores y tipos de letra de tu marca</li><li>Guía breve con ejemplos de uso</li><li>3 diseños de ejemplo y 2 oportunidades para pedir cambios</li></ul>
+            <p class="catalog-limit">No incluye registro legal, impresión ni diseño de empaques.</p>
+            <a class="catalog-link" href="#contacto" data-service="Imagen de marca">Me interesa ↗</a>
         </article>
         <article class="catalog-card">
             <div class="catalog-top"><span class="catalog-tag">04 / CONTENIDO</span><span class="catalog-icon">▦</span></div>
-            <h3>Kit de contenido</h3><p class="catalog-desc">Piezas listas para publicar por tu cuenta.</p>
-            <div class="catalog-price">$55 <small>pago único</small></div>
-            <ul><li>6 diseños estáticos para posts o historias</li><li>Textos breves y llamadas a la acción</li><li>Adaptación a una identidad visual</li><li>1 ronda de ajustes agrupados</li></ul>
-            <p class="catalog-limit">No incluye publicación, fotografía ni edición de video.</p>
-            <a class="catalog-link" href="#contacto" data-service="Kit de contenido">Me interesa ↗</a>
+            <h3>Diseños y textos para redes</h3><p class="catalog-desc">Publicaciones listas para que las subas tú.</p>
+            <div class="catalog-price">$45 <small>pago único</small></div>
+            <ul><li>6 diseños para publicaciones o historias</li><li>Textos breves para acompañar cada diseño</li><li>Adaptación a los colores de tu negocio</li><li>Una oportunidad para pedir cambios en conjunto</li></ul>
+            <p class="catalog-limit">No incluye publicar, tomar fotos ni editar videos.</p>
+            <a class="catalog-link" href="#contacto" data-service="Diseños y textos para redes">Me interesa ↗</a>
         </article>
         <article class="catalog-card">
-            <div class="catalog-top"><span class="catalog-tag">05 / WEB</span><span class="catalog-icon">⌘</span></div>
-            <h3>Landing page</h3><p class="catalog-desc">Presenta tu negocio y facilita que te contacten.</p>
-            <div class="catalog-price">$250 <small>pago único</small></div>
-            <ul><li>Una página de hasta 5 secciones</li><li>Diseño adaptable a móvil y escritorio</li><li>Botón de WhatsApp y formulario básico</li><li>SEO inicial y 2 rondas de ajustes</li></ul>
-            <p class="catalog-limit">Dominio, hosting, tienda online y funciones avanzadas no incluidos.</p>
-            <a class="catalog-link" href="#contacto" data-service="Landing page">Me interesa ↗</a>
+            <div class="catalog-top"><span class="catalog-tag">05 / PÁGINA WEB</span><span class="catalog-icon">⌘</span></div>
+            <h3>Página web para tu negocio</h3><p class="catalog-desc">Un lugar sencillo para que tus clientes te conozcan y te contacten.</p>
+            <div class="catalog-price">$200 <small>pago único</small></div>
+            <ul><li>Una página con hasta 5 partes, como Inicio, Servicios y Contacto</li><li>Se verá bien en celular y computadora</li><li>Botón de WhatsApp y formulario de contacto</li><li>Ajuste básico para que Google entienda de qué trata tu página y 2 oportunidades para pedir cambios</li></ul>
+            <p class="catalog-limit">La dirección web y el servicio para mantenerla publicada se pagan aparte. No incluye tienda en línea.</p>
+            <a class="catalog-link" href="#contacto" data-service="Página web para tu negocio">Me interesa ↗</a>
         </article>
         <article class="catalog-card">
-            <div class="catalog-top"><span class="catalog-tag">06 / ESTRATEGIA</span><span class="catalog-icon">↗</span></div>
-            <h3>Estrategia digital inicial</h3><p class="catalog-desc">Una ruta de acción realista para los próximos 30 días.</p>
-            <div class="catalog-price">$90 <small>pago único</small></div>
-            <ul><li>Reunión de descubrimiento de hasta 45 min</li><li>Público objetivo y propuesta de valor preliminares</li><li>3 pilares de contenido y calendario de 2 semanas</li><li>Canales y métricas recomendadas</li></ul>
-            <p class="catalog-limit">No incluye gestión mensual ni campañas publicitarias.</p>
-            <a class="catalog-link" href="#contacto" data-service="Estrategia digital inicial">Me interesa ↗</a>
+            <div class="catalog-top"><span class="catalog-tag">06 / PLAN DE IDEAS</span><span class="catalog-icon">↗</span></div>
+            <h3>Plan de ideas para tu negocio</h3><p class="catalog-desc">Una guía sencilla para saber qué hacer durante el próximo mes.</p>
+            <div class="catalog-price">$70 <small>pago único</small></div>
+            <ul><li>Una conversación de hasta 45 minutos</li><li>Definimos a quién quieres llegar y qué hace especial a tu negocio</li><li>3 temas para tus publicaciones y una lista de ideas para 2 semanas</li><li>Recomendaciones sobre dónde publicar y cómo medir avances</li></ul>
+            <p class="catalog-limit">No incluye manejo mensual de redes ni pago de anuncios.</p>
+            <a class="catalog-link" href="#contacto" data-service="Plan de ideas para tu negocio">Me interesa ↗</a>
         </article>
     </div>
 
-    <div class="plans-heading"><div class="section-number">PLANES RECURRENTES</div><h3>Tu presencia, mes a mes.</h3><p>Planes mensuales con alcance definido. Se pagan por adelantado.</p></div>
+    <div class="plans-heading"><div class="section-number">MANEJO DE REDES / COMMUNITY MANAGER</div><h3>Nos ocupamos de tus redes.</h3><p>Preparamos y publicamos contenido, y atendemos comentarios y mensajes durante el horario acordado. Elige el plan según la cantidad de trabajo que necesitas. Se paga al inicio de cada mes.</p></div>
     <div class="plans-grid">
-        <article class="plan-card"><span class="catalog-tag">PLAN 01 / ESENCIAL</span><h3>Inicio</h3><div class="catalog-price">$120 <small>/ mes</small></div><p>Para empezar a publicar con constancia.</p><ul><li>8 piezas estáticas al mes</li><li>Textos breves y calendario mensual</li><li>Programación en 1 plataforma</li><li>Revisión mensual breve de resultados</li><li>1 ronda de ajustes por lote</li></ul><p class="catalog-limit">No incluye gestión de mensajes, reels ni anuncios.</p><a class="catalog-link" href="#contacto" data-service="Plan Inicio — $120/mes">Elegir Inicio ↗</a></article>
-        <article class="plan-card featured-plan"><span class="plan-ribbon">RECOMENDADO</span><span class="catalog-tag">PLAN 02 / CRECIMIENTO</span><h3>Crecimiento</h3><div class="catalog-price">$220 <small>/ mes</small></div><p>Para mantener una presencia activa en dos canales.</p><ul><li>12 piezas al mes, hasta 2 reels editados</li><li>8 historias sencillas</li><li>Publicación en hasta 2 plataformas</li><li>Comentarios públicos: 15 min/día, 3 días laborables/semana</li><li>Informe mensual y 1 ronda de ajustes</li></ul><p class="catalog-limit">El cliente entrega los videos. No incluye mensajes privados ni anuncios.</p><a class="catalog-link" href="#contacto" data-service="Plan Crecimiento — $220/mes">Elegir Crecimiento ↗</a></article>
-        <article class="plan-card"><span class="catalog-tag">PLAN 03 / PLUS</span><h3>Presencia Plus</h3><div class="catalog-price">$300 <small>/ mes</small></div><p>Para negocios que necesitan más contenido y moderación.</p><ul><li>16 piezas al mes, hasta 4 reels editados</li><li>12 historias sencillas</li><li>Publicación en hasta 2 plataformas</li><li>Moderación básica hasta 20 min/día, lunes a viernes</li><li>Informe, 3 acciones sugeridas y reunión mensual</li></ul><p class="catalog-limit">No incluye atención 24/7, cierres de venta ni producción presencial.</p><a class="catalog-link" href="#contacto" data-service="Plan Presencia Plus — $300/mes">Elegir Plus ↗</a></article>
+        <article class="plan-card"><span class="catalog-tag">PLAN 01 / ESENCIAL</span><h3>Inicio</h3><div class="catalog-price">$99 <small>/ mes</small></div><p>Para mantener una red social activa y ordenada.</p><ul><li>8 publicaciones al mes con sus textos</li><li>Lista mensual con qué publicar y cuándo</li><li>Publicación en 1 red social</li><li>Respuesta a comentarios y mensajes: hasta 15 minutos al día, 3 días por semana</li><li>Resumen mensual de lo realizado</li></ul><p class="catalog-limit">No incluye videos, anuncios ni atención fuera del horario acordado.</p><a class="catalog-link" href="#contacto" data-service="Plan Inicio — $99/mes">Elegir Inicio ↗</a></article>
+        <article class="plan-card featured-plan"><span class="plan-ribbon">RECOMENDADO</span><span class="catalog-tag">PLAN 02 / CRECIMIENTO</span><h3>Crecimiento</h3><div class="catalog-price">$179 <small>/ mes</small></div><p>Para atender y publicar en hasta dos redes sociales.</p><ul><li>12 publicaciones al mes y hasta 2 videos cortos editados</li><li>8 historias sencillas</li><li>Publicación en hasta 2 redes sociales</li><li>Respuesta a comentarios y mensajes: hasta 30 minutos al día, 3 días por semana</li><li>Resumen mensual y una oportunidad para pedir cambios</li></ul><p class="catalog-limit">Tú nos envías los videos originales. No incluye anuncios ni atención los 7 días.</p><a class="catalog-link" href="#contacto" data-service="Plan Crecimiento — $179/mes">Elegir Crecimiento ↗</a></article>
+        <article class="plan-card"><span class="catalog-tag">PLAN 03 / MÁS APOYO</span><h3>Presencia Plus</h3><div class="catalog-price">$249 <small>/ mes</small></div><p>Para publicar más y dedicar más tiempo a tu comunidad.</p><ul><li>16 publicaciones al mes y hasta 4 videos cortos editados</li><li>12 historias sencillas</li><li>Publicación en hasta 2 redes sociales</li><li>Respuesta a comentarios y mensajes: hasta 30 minutos por día, de lunes a viernes</li><li>Resumen mensual, ideas de mejora y una reunión breve</li></ul><p class="catalog-limit">Tú nos envías los videos originales. No incluye anuncios, atención fuera del horario acordado ni grabaciones presenciales.</p><a class="catalog-link" href="#contacto" data-service="Plan Presencia Plus — $249/mes">Elegir Presencia Plus ↗</a></article>
     </div>
 
     <div class="combo-panel">
-        <div><span class="catalog-tag">COMBOS PARA EMPEZAR</span><h3>Más claridad desde el primer paso.</h3><p>Combina servicios puntuales con un precio conjunto.</p></div>
-        <div class="combo-item"><div><strong>Arranque de marca</strong><small>Identidad visual + kit de contenido + diagnóstico</small></div><b>$199</b><a href="#contacto" data-service="Combo Arranque de marca — $199">Consultar ↗</a></div>
-        <div class="combo-item"><div><strong>Presencia digital</strong><small>Landing page + diagnóstico inicial</small></div><b>$279</b><a href="#contacto" data-service="Combo Presencia digital — $279">Consultar ↗</a></div>
-        <div class="combo-item"><div><strong>Marca en movimiento</strong><small>Plan Crecimiento + diagnóstico en el primer mes</small></div><b>$250 <small>/ mes inicial</small></b><a href="#contacto" data-service="Combo Marca en movimiento — $250 primer mes">Consultar ↗</a></div>
+        <div><span class="catalog-tag">PAQUETES A PRECIO ESPECIAL</span><h3>Empieza con lo necesario.</h3><p>Juntamos servicios que suelen necesitarse al mismo tiempo.</p></div>
+        <div class="combo-item"><div><strong>Imagen lista para publicar</strong><small>Imagen de marca + diseños y textos para redes + revisión de tu negocio</small></div><b>$175</b><a href="#contacto" data-service="Paquete Imagen lista para publicar — $175">Consultar ↗</a></div>
+        <div class="combo-item"><div><strong>Tu negocio en internet</strong><small>Página web para tu negocio + revisión inicial</small></div><b>$205</b><a href="#contacto" data-service="Paquete Tu negocio en internet — $205">Consultar ↗</a></div>
+        <div class="combo-item"><div><strong>Redes en marcha</strong><small>Plan Crecimiento de community manager + revisión inicial el primer mes</small></div><b>$195 <small>primer mes</small></b><a href="#contacto" data-service="Paquete Redes en marcha — $195 primer mes">Consultar ↗</a></div>
     </div>
     <div class="external-costs">
-        <h3>Costes externos, siempre transparentes</h3>
-        <p>Se pagan aparte y se aprueban antes de contratar: dominio, hosting, suscripciones, fotografía, tipografías licenciadas, impresión y presupuesto de anuncios. Como referencia orientativa, un dominio .com puede costar $13–30/año y el hosting básico $30–150/año, según proveedor y renovación.</p>
-        <p class="catalog-limit">Precios de lanzamiento estimados de EVOLVA; no son una cotización vinculante. Impuestos aplicables se detallan en la propuesta o factura. Los resultados comerciales no se garantizan.</p>
+        <h3>¿Qué se paga por separado?</h3>
+        <p>Algunos servicios externos pueden tener un costo adicional: la dirección de tu página web, el espacio para mantenerla publicada, fotografías, impresiones o anuncios. Siempre te diremos el precio y pediremos tu aprobación antes de contratar algo.</p>
+        <p class="catalog-limit">Estos son precios iniciales. El valor final se confirma contigo antes de comenzar. El trabajo ayuda a mejorar tu presencia, pero no garantiza ventas ni una cantidad específica de clientes.</p>
     </div>
 </section>
 
@@ -933,14 +958,13 @@
         <details>
 
             <summary>
-                ¿Necesito saber de redes sociales?
+                ¿Necesito saber de redes sociales o páginas web?
                 <span>+</span>
             </summary>
 
             <p>
 
-                No. Te explicamos todo de manera sencilla
-                y nos encargamos de la parte técnica.
+                No. Te explicamos cada paso con palabras sencillas y te guiamos con la parte técnica.
 
             </p>
 
@@ -967,14 +991,45 @@
         <details>
 
             <summary>
-                ¿Necesito una página web?
+                ¿Qué es una página web sencilla?
                 <span>+</span>
             </summary>
 
             <p>
 
-                Depende del negocio y de tus objetivos.
-                Primero analizamos si realmente puede ayudarte.
+                Es un sitio donde las personas pueden conocer tu negocio, ver lo que ofreces y contactarte. Revisamos contigo si te conviene tener una.
+
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                ¿Qué hace un community manager?
+                <span>+</span>
+            </summary>
+
+            <p>
+
+                Es quien ayuda a manejar las redes de tu negocio: organiza y publica contenido, responde comentarios y mensajes, y cuida la comunicación con tus clientes. El tiempo de atención depende del plan que elijas.
+
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                ¿Qué significa "calendario de publicaciones"?
+                <span>+</span>
+            </summary>
+
+            <p>
+
+                Es una lista sencilla que indica qué publicar y en qué día. Así sabes con anticipación qué se compartirá en tus redes.
 
             </p>
 
@@ -990,9 +1045,7 @@
 
             <p>
 
-                Significa utilizar herramientas digitales para
-                mejorar cómo tu negocio se presenta, comunica
-                y conecta con sus clientes.
+                Significa usar internet y herramientas sencillas para que las personas conozcan tu negocio, entiendan qué ofreces y puedan contactarte.
 
             </p>
 
@@ -1036,7 +1089,7 @@
             <label>Servicio que te interesa
                 <select name="service" id="contactService" required>
                     <option value="">Selecciona una opción</option>
-                    <option>Diagnóstico digital</option><option>Logotipo esencial</option><option>Identidad visual básica</option><option>Kit de contenido</option><option>Landing page</option><option>Estrategia digital inicial</option><option>Plan Inicio — $120/mes</option><option>Plan Crecimiento — $220/mes</option><option>Plan Presencia Plus — $300/mes</option><option>Combo Arranque de marca — $199</option><option>Combo Presencia digital — $279</option><option>Otro / necesito orientación</option>
+                    <option>Revisión de tu negocio en internet</option><option>Diseño de logotipo</option><option>Imagen de marca</option><option>Diseños y textos para redes</option><option>Página web para tu negocio</option><option>Plan de ideas para tu negocio</option><option>Plan Inicio — $99/mes</option><option>Plan Crecimiento — $179/mes</option><option>Plan Presencia Plus — $249/mes</option><option>Paquete Imagen lista para publicar — $175</option><option>Paquete Tu negocio en internet — $205</option><option>Paquete Redes en marcha — $195 primer mes</option><option>Otro / necesito orientación</option>
                 </select>
             </label>
             <label class="form-full">Cuéntanos un poco más<textarea name="message" required minlength="10" maxlength="2000" rows="4" placeholder="¿Qué hace tu negocio y qué te gustaría conseguir?"></textarea></label>
@@ -1059,13 +1112,17 @@
 
     <div>
 
-        <a class="logo">
-            EVOLVA<span>_</span>
+        <a class="logo" href="#inicio" aria-label="EVOLVA, impulsamos tu negocio">
+            <img class="logo-mark" src="evolva-mark.svg" alt="">
+            <span class="logo-lockup">
+                <span class="logo-wordmark">EVOLVA</span>
+                <span class="logo-tagline">IMPULSAMOS TU NEGOCIO</span>
+            </span>
         </a>
 
         <p>
-            Digitalizamos negocios.<br>
-            Evolucionamos marcas.
+            Herramientas, talento y estrategia<br>
+            para llevar tu negocio más lejos.
         </p>
 
     </div>

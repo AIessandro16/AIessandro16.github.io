@@ -6,14 +6,26 @@ const dashboardStatus = document.getElementById('dashboardStatus');
 const contactList = document.getElementById('contactList');
 
 async function api(path, options = {}) {
+    if (window.location.protocol === 'file:') {
+        throw new Error('Estás abriendo el archivo directamente. En VS Code ejecuta «npm start» y abre http://localhost:3000/admin.html.');
+    }
     const token = sessionStorage.getItem('evolva-admin-token');
-    const response = await fetch(`${apiBase}${path}`, {
-        credentials: 'include',
-        ...options,
-        headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...(options.headers || {}) }
-    });
+    let response;
+    try {
+        response = await fetch(`${apiBase}${path}`, {
+            credentials: 'include',
+            ...options,
+            headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...(options.headers || {}) }
+        });
+    } catch {
+        throw new Error('No se pudo conectar con la API de EVOLVA. Inicia el servidor con «npm start» y abre el sitio desde http://localhost:3000.');
+    }
     const result = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(result.error || 'No se pudo completar la solicitud.');
+    if (!response.ok) {
+        if (response.status === 429) throw new Error('Se alcanzó el límite de intentos. Espera 15 minutos y vuelve a probar.');
+        const contentType = response.headers.get('content-type') || 'respuesta sin tipo de contenido';
+        throw new Error(result.error || result.message || `La API respondió HTTP ${response.status} (${contentType}) en ${response.url}. Comprueba que el sitio esté abierto desde el servidor EVOLVA.`);
+    }
     return result;
 }
 
@@ -59,7 +71,24 @@ async function loadContacts() {
             const message = document.createElement('p');
             message.className = 'contact-card-message';
             message.textContent = contact.message;
-            card.append(heading, details, message);
+            const deleteButton = document.createElement('button');
+            deleteButton.type = 'button';
+            deleteButton.className = 'button secondary contact-delete-button';
+            deleteButton.textContent = 'Eliminar solicitud';
+            deleteButton.setAttribute('aria-label', `Eliminar solicitud de ${contact.name}`);
+            deleteButton.addEventListener('click', async () => {
+                if (!window.confirm(`¿Eliminar la solicitud de ${contact.name}? Esta acción no se puede deshacer.`)) return;
+                deleteButton.disabled = true;
+                dashboardStatus.textContent = 'Eliminando solicitud…';
+                try {
+                    await api(`/api/admin/contacts/${contact.id}`, { method: 'DELETE' });
+                    await loadContacts();
+                } catch (error) {
+                    dashboardStatus.textContent = error.message;
+                    deleteButton.disabled = false;
+                }
+            });
+            card.append(heading, details, message, deleteButton);
             contactList.append(card);
         });
         dashboardStatus.textContent = '';
