@@ -242,8 +242,24 @@ function createResult() {
     }
 
 
-    else if (
-        priority === "management" ||
+    else if (presence === "none") {
+
+        title =
+            "Empecemos por construir tu presencia en internet.";
+
+        text =
+            "No necesitas tener redes ni una página para empezar. Podemos ayudarte a definir una imagen para tu negocio, preparar contenido y elegir dónde mostrar lo que ofreces.";
+
+        services = [
+            "Imagen de marca",
+            "Diseños y textos para redes",
+            "Manejo de redes (community manager)"
+        ];
+
+    }
+
+
+    
         presence === "social"
     ) {
 
