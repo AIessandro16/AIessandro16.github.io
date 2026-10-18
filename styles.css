@@ -2327,11 +2327,20 @@ footer p {
 .form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
 .contact-form label { display:flex; flex-direction:column; gap:.45rem; font-size:.8rem; }
 .contact-form label span { opacity:.65; }
+.contact-form .field-title { display:block; min-height:1.2em; opacity:1; }
+.contact-form .field-optional { font-size:.9em; font-weight:400; opacity:.65; }
 .contact-form input:not([type=checkbox]), .contact-form select, .contact-form textarea { width:100%; min-width:0; border:1px solid var(--line,rgba(255,255,255,.22)); border-radius:0; padding:.85rem; color:var(--white); background:var(--surface-2); caret-color:var(--gold); font:inherit; color-scheme:dark; }
 body.light .contact-form input:not([type=checkbox]), body.light .contact-form select, body.light .contact-form textarea { color-scheme:light; }
 .contact-form select option { color:var(--white); background:var(--surface); }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color:var(--muted); opacity:1; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline:2px solid var(--accent,#d5ad58); outline-offset:2px; }
+.evolva-method { margin-top:1.6rem; padding:1rem; border:1px solid var(--line,rgba(255,255,255,.16)); background:var(--surface,rgba(255,255,255,.025)); }
+.evolva-method-intro { margin:0 0 .8rem; font-size:.86rem; line-height:1.6; }
+.evolva-method ol { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:.5rem; padding:0; margin:0; list-style:none; }
+.evolva-method li { display:grid; justify-items:center; gap:.3rem; padding:.65rem .3rem; border:1px solid var(--line,rgba(255,255,255,.12)); text-align:center; }
+.evolva-method li strong { color:var(--accent,#d5ad58); font:600 1.15rem "IBM Plex Mono",monospace; }
+.evolva-method li span { font-size:.72rem; }
+@media(max-width:700px) { .evolva-method ol { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 .form-full { grid-column:1/-1; }
 .privacy-check { flex-direction:row!important; align-items:flex-start; gap:.7rem!important; }
 .privacy-check input { margin-top:.25rem; accent-color:var(--accent,#d5ad58); }

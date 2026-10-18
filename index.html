@@ -250,6 +250,12 @@
                 con propósito.
 
             </p>
+            <div class="evolva-method" aria-label="Las seis etapas del método EVOLVA">
+                <p class="evolva-method-intro"><strong>EVOLVA también resume cómo te acompañamos:</strong> un camino claro, desde entender tu negocio hasta hacerlo crecer.</p>
+                <ol>
+                    <li><strong>E</strong><span>Explorar</span></li><li><strong>V</strong><span>Visualizar</span></li><li><strong>O</strong><span>Organizar</span></li><li><strong>L</strong><span>Lanzar</span></li><li><strong>V</strong><span>Verificar</span></li><li><strong>A</strong><span>Ampliar</span></li>
+                </ol>
+            </div>
 
         </div>
 
@@ -1025,16 +1031,16 @@
     <p class="contact-lead">Cuéntanos qué quieres mejorar y te responderemos para definir el siguiente paso.</p>
     <form id="contactForm" class="contact-form">
         <div class="form-grid">
-            <label>Tu nombre<input name="name" autocomplete="name" required maxlength="100" placeholder="¿Cómo te llamas?"></label>
-            <label>Correo electrónico<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@correo.com"></label>
-            <label>Nombre del negocio <span>(opcional)</span><input name="business" maxlength="120" placeholder="Tu marca o emprendimiento"></label>
-            <label>Servicio que te interesa
+            <label><span class="field-title">Tu nombre</span><input name="name" autocomplete="name" required maxlength="100" placeholder="¿Cómo te llamas?"></label>
+            <label><span class="field-title">Correo electrónico</span><input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@correo.com"></label>
+            <label><span class="field-title">Nombre del negocio <small class="field-optional">(opcional)</small></span><input name="business" maxlength="120" placeholder="Tu marca o emprendimiento"></label>
+            <label><span class="field-title">Servicio que te interesa</span>
                 <select name="service" id="contactService" required>
                     <option value="">Selecciona una opción</option>
                     <option>Revisión de tu negocio en internet</option><option>Diseño de logotipo</option><option>Imagen de marca</option><option>Diseños y textos para redes</option><option>Página web para tu negocio</option><option>Plan de ideas para tu negocio</option><option>Plan Inicio — $99/mes</option><option>Plan Crecimiento — $179/mes</option><option>Plan Presencia Plus — $249/mes</option><option>Paquete Imagen lista para publicar — $175</option><option>Paquete Tu negocio en internet — $205</option><option>Paquete Redes en marcha — $195 primer mes</option><option>Otro / necesito orientación</option>
                 </select>
             </label>
-            <label class="form-full">Cuéntanos un poco más<textarea name="message" required minlength="10" maxlength="2000" rows="4" placeholder="¿Qué hace tu negocio y qué te gustaría conseguir?"></textarea></label>
+            <label class="form-full"><span class="field-title">Cuéntanos un poco más</span><textarea name="message" required minlength="10" maxlength="2000" rows="4" placeholder="¿Qué hace tu negocio y qué te gustaría conseguir?"></textarea></label>
             <label class="privacy-check form-full"><input type="checkbox" name="consent" required><span>Acepto que EVOLVA use estos datos para responder a mi consulta.</span></label>
         </div>
         <div class="form-actions"><button class="button primary large" type="submit" id="contactSubmit">Enviar consulta ↗</button><span id="formStatus" role="status" aria-live="polite"></span></div>
@@ -1094,7 +1100,7 @@
     <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistantPanel">Habla con Evol ↗</button>
     <section class="assistant-panel" id="assistantPanel" aria-label="Chat con Evol" hidden>
         <div class="assistant-heading"><div><span class="terminal">EVOLVA / ASISTENTE</span><h2>Hola, soy Evol.</h2></div><button type="button" id="assistantClose" aria-label="Cerrar asistente">×</button></div>
-        <p class="assistant-intro">Cuéntame qué quieres mejorar en tu negocio y te recomendaré un primer paso.</p>
+        <p class="assistant-intro">¿No sabes qué mejorar primero? Cuéntame de tu negocio y te ayudaré a elegir un paso concreto.</p>
         <div class="assistant-messages" id="assistantMessages" role="log" aria-live="polite"><p class="assistant-message assistant-reply">Puedo orientarte sobre marca, contenido, páginas web y los servicios de EVOLVA.</p></div>
         <form class="assistant-form" id="assistantForm"><label class="sr-only" for="assistantInput">Tu mensaje</label><input id="assistantInput" maxlength="500" required placeholder="¿Qué necesita mi negocio?"><button type="submit" aria-label="Enviar mensaje">↑</button></form>
         <p class="assistant-note" id="assistantStatus" role="status" aria-live="polite">Asistente de orientación con IA.</p>
