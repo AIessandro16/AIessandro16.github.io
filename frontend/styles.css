@@ -1,3 +1,49 @@
+@property --black {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #080807;
+}
+@property --black-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #10100e;
+}
+@property --surface {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #151512;
+}
+@property --surface-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #1c1a15;
+}
+@property --white {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #f5f0e7;
+}
+@property --muted {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #aaa399;
+}
+@property --gold {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #c9a66b;
+}
+@property --gold-light {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #e3c58f;
+}
+@property --line {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(245,240,231,.12);
+}
+
 :root {
 
     --black: #080807;
@@ -67,8 +113,17 @@ body {
     overflow-x: hidden;
 
     transition:
-        background .35s ease,
-        color .35s ease;
+        --black .42s ease,
+        --black-2 .42s ease,
+        --surface .42s ease,
+        --surface-2 .42s ease,
+        --white .42s ease,
+        --muted .42s ease,
+        --gold .42s ease,
+        --gold-light .42s ease,
+        --line .42s ease,
+        background .42s ease,
+        color .42s ease;
 
 }
 
@@ -2450,7 +2505,7 @@ body.light .comparison-after {
     .comparison .social-mock { height: 270px; }
 }
 
-/* Transición arcade al cambiar el tema: barrido CRT y destello pixelado */
+/* Cambio de tema suave con un reflejo cálido inspirado en la paleta EVOLVA */
 #arcadeTransition {
     position: fixed;
     inset: 0;
@@ -2460,54 +2515,17 @@ body.light .comparison-after {
     visibility: hidden;
     opacity: 0;
     background:
-        repeating-linear-gradient(0deg, rgba(8, 10, 16, .56) 0 2px, transparent 2px 5px),
-        linear-gradient(110deg, rgba(213, 173, 88, .86), rgba(65, 205, 216, .72), rgba(16, 19, 30, .88));
+        radial-gradient(ellipse at 50% 18%, rgba(227,197,143,.12), transparent 58%),
+        linear-gradient(115deg, transparent 25%, rgba(201,166,107,.045) 50%, transparent 75%);
 }
 #arcadeTransition.active {
     visibility: visible;
-    animation: arcade-screen-wipe 760ms steps(12, end) both;
+    animation: theme-soft-glow 520ms ease-out both;
 }
-#arcadeTransition::before {
-    position: absolute;
-    top: -35%;
-    left: 0;
-    width: 100%;
-    height: 24%;
-    content: "";
-    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, .72), transparent);
-    filter: blur(5px);
-    animation: arcade-scan-beam 760ms steps(12, end) both;
-}
-#arcadeTransition::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: .9rem 1.2rem;
-    content: "EVOLVA  //  MODO ACTUALIZADO";
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 235, 190, .8);
-    color: #fff8e8;
-    background: rgba(13, 16, 23, .88);
-    box-shadow: 0 0 28px rgba(213, 173, 88, .75), 0 0 70px rgba(65, 205, 216, .36);
-    font: 600 .75rem "IBM Plex Mono", monospace;
-    letter-spacing: .12em;
-    white-space: nowrap;
-    animation: arcade-label 760ms steps(4, end) both;
-}
-@keyframes arcade-screen-wipe {
-    0% { clip-path: inset(0 0 100%); opacity: 0; }
-    12% { clip-path: inset(0 0 82%); opacity: 1; }
-    50% { clip-path: inset(0 0 0); opacity: .94; }
-    100% { clip-path: inset(100% 0 0); opacity: 0; visibility: hidden; }
-}
-@keyframes arcade-scan-beam {
-    from { top: -35%; }
-    to { top: 115%; }
-}
-@keyframes arcade-label {
-    0%, 20% { opacity: 0; }
-    30%, 72% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes theme-soft-glow {
+    0% { opacity: 0; transform: scale(.99); }
+    32% { opacity: .8; }
+    100% { opacity: 0; transform: scale(1.015); visibility: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
     #arcadeTransition { display: none !important; }

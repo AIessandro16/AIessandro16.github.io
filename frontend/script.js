@@ -60,7 +60,7 @@ if (savedTheme === "light") {
 }
 
 
-const arcadeTransition = $("#arcadeTransition");
+const themeTransition = $("#arcadeTransition");
 
 themeToggle.addEventListener("click", () => {
 
@@ -79,7 +79,7 @@ themeToggle.addEventListener("click", () => {
 });
 
 arcadeTransition?.addEventListener("animationend", (event) => {
-    if (event.animationName === "arcade-screen-wipe") {
+    if (event.animationName === "theme-soft-glow") {
         arcadeTransition.classList.remove("active");
     }
 });
