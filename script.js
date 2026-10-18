@@ -258,8 +258,8 @@ function createResult() {
 
     }
 
-
-    
+    else if (
+        priority === "management" ||
         presence === "social"
     ) {
 
