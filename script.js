@@ -60,21 +60,28 @@ if (savedTheme === "light") {
 }
 
 
+const arcadeTransition = $("#arcadeTransition");
+
 themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("light");
 
-    const isLight =
-        document.body.classList.contains("light");
+    const isLight = document.body.classList.contains("light");
+    localStorage.setItem("evolva-theme", isLight ? "light" : "dark");
+    themeToggle.textContent = isLight ? "☾" : "☼";
 
-    localStorage.setItem(
-        "evolva-theme",
-        isLight ? "light" : "dark"
-    );
+    if (arcadeTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        arcadeTransition.classList.remove("active");
+        void arcadeTransition.offsetWidth;
+        arcadeTransition.classList.add("active");
+    }
 
-    themeToggle.textContent =
-        isLight ? "☾" : "☼";
+});
 
+arcadeTransition?.addEventListener("animationend", (event) => {
+    if (event.animationName === "arcade-screen-wipe") {
+        arcadeTransition.classList.remove("active");
+    }
 });
 
 
@@ -372,110 +379,6 @@ resetButton.addEventListener("click", () => {
 
 
 showQuestion(0);
-
-
-/* =========================
-   BEFORE / AFTER
-========================= */
-
-const comparison =
-    $("#comparison");
-
-const comparisonAfter =
-    $("#comparisonAfter");
-
-const comparisonHandle =
-    $("#comparisonHandle");
-
-const comparisonRange =
-    $("#comparisonRange");
-
-
-function updateComparison(value) {
-
-    comparisonAfter.style.width =
-        `${value}%`;
-
-    comparisonHandle.style.left =
-        `${value}%`;
-
-}
-
-
-comparisonRange.addEventListener(
-    "input",
-    (event) => {
-
-        updateComparison(
-            event.target.value
-        );
-
-    }
-);
-
-
-let dragging = false;
-
-
-comparisonHandle.addEventListener(
-    "pointerdown",
-    () => {
-
-        dragging = true;
-
-    }
-);
-
-
-window.addEventListener(
-    "pointerup",
-    () => {
-
-        dragging = false;
-
-    }
-);
-
-
-comparison.addEventListener(
-    "pointermove",
-    (event) => {
-
-        if (!dragging) return;
-
-
-        const rect =
-            comparison.getBoundingClientRect();
-
-
-        let percentage =
-            ((event.clientX - rect.left) /
-                rect.width) * 100;
-
-
-        percentage =
-            Math.max(
-                20,
-                Math.min(
-                    80,
-                    percentage
-                )
-            );
-
-
-        comparisonRange.value =
-            percentage;
-
-
-        updateComparison(
-            percentage
-        );
-
-    }
-);
-
-
-updateComparison(50);
 
 
 /* =========================
